@@ -9,7 +9,7 @@ class Image {
    private:
     int width_;
     int height_;
-    std::vector<Color> pixels_;
+    vector<Color> pixels_;
 
    public:
     Image(int w, int h, const Color &fill = {255, 255, 255});
