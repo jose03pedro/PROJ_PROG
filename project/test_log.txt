@@ -1,7 +1,7 @@
 >>>> [1] add1 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -10,65 +10,31 @@ Executing command '0' ...
 Executing command 'save' ...
 Images differ at pixel (100, 2)
 0 0 0 vs 255 0 0
-
-=================================================================
-==3573==ERROR: LeakSanitizer: detected memory leaks
-
-Direct leak of 32 byte(s) in 1 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5f36f7 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #2 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #3 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #4 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #5 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #6 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #7 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #8 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Indirect leak of 285000 byte(s) in 1 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #10 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-SUMMARY: AddressSanitizer: 285032 byte(s) leaked in 2 allocation(s).
 >>>> [2] add2 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '0' ...
 Executing command '400' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/mondrian.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '400' ...
 Executing command '0' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/mondrian.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -77,65 +43,31 @@ Executing command '400' ...
 Executing command 'save' ...
 Images differ at pixel (100, 2)
 0 0 0 vs 0 0 255
-
-=================================================================
-==3575==ERROR: LeakSanitizer: detected memory leaks
-
-Direct leak of 128 byte(s) in 4 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5f36f7 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #2 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #3 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #4 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #5 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #6 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #7 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #8 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Indirect leak of 1530000 byte(s) in 4 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #10 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-SUMMARY: AddressSanitizer: 1530128 byte(s) leaked in 8 allocation(s).
 >>>> [3] add3 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/mondrian.png' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '0' ...
 Executing command '400' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/mondrian.png' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command '400' ...
 Executing command '0' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -144,58 +76,24 @@ Executing command '400' ...
 Executing command 'save' ...
 Images differ at pixel (0, 0)
 255 255 255 vs 200 200 200
-
-=================================================================
-==3577==ERROR: LeakSanitizer: detected memory leaks
-
-Direct leak of 128 byte(s) in 4 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5f36f7 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #2 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #3 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #4 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #5 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #6 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #7 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #8 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Indirect leak of 1530000 byte(s) in 4 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #10 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-SUMMARY: AddressSanitizer: 1530128 byte(s) leaked in 8 allocation(s).
 >>>> [4] add4 <<<<
 Executing command 'open' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '1' ...
 Executing command '50' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '301' ...
 Executing command '50' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -204,58 +102,24 @@ Executing command '100' ...
 Executing command 'save' ...
 Images differ at pixel (101, 52)
 0 0 0 vs 82 72 36
-
-=================================================================
-==3579==ERROR: LeakSanitizer: detected memory leaks
-
-Direct leak of 96 byte(s) in 3 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5f36f7 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #2 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #3 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #4 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #5 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #6 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #7 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #8 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Indirect leak of 855000 byte(s) in 3 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #10 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-SUMMARY: AddressSanitizer: 855096 byte(s) leaked in 6 allocation(s).
 >>>> [5] add5 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/fernando-pessoa.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/fernando-pessoa.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '300' ...
 Executing command '125' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/fernando-pessoa.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -264,40 +128,6 @@ Executing command '225' ...
 Executing command 'save' ...
 Images differ at pixel (40, 0)
 254 254 254 vs 255 255 255
-
-=================================================================
-==3581==ERROR: LeakSanitizer: detected memory leaks
-
-Direct leak of 96 byte(s) in 3 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5f36f7 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #2 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #3 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #4 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #5 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #6 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #7 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #8 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Indirect leak of 804330 byte(s) in 3 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #10 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-SUMMARY: AddressSanitizer: 804426 byte(s) leaked in 6 allocation(s).
 >>>> [6] basic_blank1 <<<<
 Executing command 'blank' ...
 Executing command 'save' ...
@@ -346,14 +176,14 @@ Executing command 'save' ...
 >>>> [17] extra1 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/vu.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/vu2.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -369,49 +199,50 @@ Executing command 'replace' ...
 Executing command 'replace' ...
 Executing command 'invert' ...
 =================================================================
-==3605==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f616f3fecb0 at pc 0x560cca5ac59e bp 0x7ffe58e11590 sp 0x7ffe58e11580
-READ of size 1 at 0x7f616f3fecb0 thread T0
-    #0 0x560cca5ac59d in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:159
-    #1 0x560cca5a9d6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
-    #2 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #3 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #4 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #5 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #6 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #7 0x7f61727cde3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #8 0x560cca597ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7eed4)
+==4147==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7fd202cfecb0 at pc 0x557be4a1775a bp 0x7ffd4ca71e30 sp 0x7ffd4ca71e20
+READ of size 1 at 0x7fd202cfecb0 thread T0
+    #0 0x557be4a17759 in prog::Color::Color(prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Color.cpp:9
+    #1 0x557be4a1d60b in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:158
+    #2 0x557be4a1ad6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
+    #3 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #4 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #5 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #6 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #7 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #8 0x7fd2060d6e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #9 0x557be4a08ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7fed4)
 
-0x7f616f3fecb0 is located 0 bytes to the right of 2458800-byte region [0x7f616f1a6800,0x7f616f3fecb0)
+0x7fd202cfecb0 is located 0 bytes to the right of 2458800-byte region [0x7fd202aa6800,0x7fd202cfecb0)
 allocated by thread T0 here:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5aaf26 in prog::Script::blank() /home/jose03pedro/PROJ_PROG/project/Script.cpp:108
-    #9 0x560cca5a9c58 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:40
-    #10 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #11 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #12 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #13 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #14 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7fd206cf11c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x557be4a19e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x557be4a19cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x557be4a19b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
+    #4 0x557be4a196ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
+    #5 0x557be4a18ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
+    #6 0x557be4a187f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
+    #7 0x557be4a18111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
+    #8 0x557be4a1bf26 in prog::Script::blank() /home/jose03pedro/PROJ_PROG/project/Script.cpp:108
+    #9 0x557be4a1ac58 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:40
+    #10 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #11 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #12 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #13 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #14 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Script.cpp:159 in prog::Script::invert()
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Color.cpp:9 in prog::Color::Color(prog::Color const&)
 Shadow bytes around the buggy address:
-  0x0fecade77d40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecade77d50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecade77d60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecade77d70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecade77d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fecade77d90: 00 00 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa
-  0x0fecade77da0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecade77db0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecade77dc0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecade77dd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecade77de0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597d40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0597d50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0597d60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0597d70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0597d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ffac0597d90: 00 00 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa
+  0x0ffac0597da0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597db0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597dc0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597dd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597de0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 
@@ -432,18 +263,18 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==3605==ABORTING
+==4147==ABORTING
 >>>> [18] extra2 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/vu.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/vu2.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -462,49 +293,50 @@ Executing command 'replace' ...
 Executing command 'replace' ...
 Executing command 'invert' ...
 =================================================================
-==3606==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f616f3fecb0 at pc 0x560cca5ac59e bp 0x7ffe58e11590 sp 0x7ffe58e11580
-READ of size 1 at 0x7f616f3fecb0 thread T0
-    #0 0x560cca5ac59d in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:159
-    #1 0x560cca5a9d6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
-    #2 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #3 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #4 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #5 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #6 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #7 0x7f61727cde3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #8 0x560cca597ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7eed4)
+==4148==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7fd202cfecb0 at pc 0x557be4a1775a bp 0x7ffd4ca71e30 sp 0x7ffd4ca71e20
+READ of size 1 at 0x7fd202cfecb0 thread T0
+    #0 0x557be4a17759 in prog::Color::Color(prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Color.cpp:9
+    #1 0x557be4a1d60b in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:158
+    #2 0x557be4a1ad6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
+    #3 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #4 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #5 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #6 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #7 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #8 0x7fd2060d6e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #9 0x557be4a08ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7fed4)
 
-0x7f616f3fecb0 is located 0 bytes to the right of 2458800-byte region [0x7f616f1a6800,0x7f616f3fecb0)
+0x7fd202cfecb0 is located 0 bytes to the right of 2458800-byte region [0x7fd202aa6800,0x7fd202cfecb0)
 allocated by thread T0 here:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5aaf26 in prog::Script::blank() /home/jose03pedro/PROJ_PROG/project/Script.cpp:108
-    #9 0x560cca5a9c58 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:40
-    #10 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #11 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #12 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #13 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #14 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7fd206cf11c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x557be4a19e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x557be4a19cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x557be4a19b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
+    #4 0x557be4a196ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
+    #5 0x557be4a18ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
+    #6 0x557be4a187f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
+    #7 0x557be4a18111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
+    #8 0x557be4a1bf26 in prog::Script::blank() /home/jose03pedro/PROJ_PROG/project/Script.cpp:108
+    #9 0x557be4a1ac58 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:40
+    #10 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #11 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #12 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #13 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #14 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Script.cpp:159 in prog::Script::invert()
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Color.cpp:9 in prog::Color::Color(prog::Color const&)
 Shadow bytes around the buggy address:
-  0x0fecade77d40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecade77d50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecade77d60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecade77d70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecade77d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fecade77d90: 00 00 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa
-  0x0fecade77da0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecade77db0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecade77dc0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecade77dd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecade77de0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597d40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0597d50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0597d60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0597d70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0597d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ffac0597d90: 00 00 00 00 00 00[fa]fa fa fa fa fa fa fa fa fa
+  0x0ffac0597da0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597db0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597dc0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597dd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0597de0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 
@@ -525,55 +357,56 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==3606==ABORTING
+==4148==ABORTING
 >>>> [19] extra3 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 =================================================================
-==3607==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f616ed6cd80 at pc 0x560cca5ac59e bp 0x7ffe58e11590 sp 0x7ffe58e11580
-READ of size 1 at 0x7f616ed6cd80 thread T0
-    #0 0x560cca5ac59d in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:159
-    #1 0x560cca5a9d6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
-    #2 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #3 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #4 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #5 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #6 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #7 0x7f61727cde3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #8 0x560cca597ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7eed4)
+==4149==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7fd20266cd80 at pc 0x557be4a1775a bp 0x7ffd4ca71e30 sp 0x7ffd4ca71e20
+READ of size 1 at 0x7fd20266cd80 thread T0
+    #0 0x557be4a17759 in prog::Color::Color(prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Color.cpp:9
+    #1 0x557be4a1d60b in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:158
+    #2 0x557be4a1ad6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
+    #3 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #4 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #5 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #6 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #7 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #8 0x7fd2060d6e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #9 0x557be4a08ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7fed4)
 
-0x7f616ed6cd80 is located 0 bytes to the right of 1852800-byte region [0x7f616eba8800,0x7f616ed6cd80)
+0x7fd20266cd80 is located 0 bytes to the right of 1852800-byte region [0x7fd2024a8800,0x7fd20266cd80)
 allocated by thread T0 here:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aa9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
-    #10 0x560cca5a9bfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7fd206cf11c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x557be4a19e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x557be4a19cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x557be4a19b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
+    #4 0x557be4a196ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
+    #5 0x557be4a18ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
+    #6 0x557be4a187f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
+    #7 0x557be4a18111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
+    #8 0x557be4a653ec in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
+    #9 0x557be4a1b9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
+    #10 0x557be4a1abfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
+    #11 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #12 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #13 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #14 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #15 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Script.cpp:159 in prog::Script::invert()
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Color.cpp:9 in prog::Color::Color(prog::Color const&)
 Shadow bytes around the buggy address:
-  0x0fecadda5960: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadda5970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadda5980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadda5990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadda59a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fecadda59b0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda59c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda59d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda59e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda59f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda5a00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c5960: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac04c5970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac04c5980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac04c5990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac04c59a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ffac04c59b0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c59c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c59d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c59e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c59f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c5a00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 
@@ -594,12 +427,12 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==3607==ABORTING
+==4149==ABORTING
 >>>> [20] extra4 <<<<
 Executing command 'blank' ...
 Executing command 'fill' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -607,7 +440,7 @@ Executing command '0' ...
 Executing command '0' ...
 Executing command 'fill' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -615,7 +448,7 @@ Executing command '250' ...
 Executing command '0' ...
 Executing command 'fill' ...
 Executing command 'add' ...
-Images are not the same size.
+Executing command 'input/lion.png' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
@@ -624,40 +457,6 @@ Executing command '0' ...
 Executing command 'save' ...
 Images differ at pixel (100, 2)
 0 0 0 vs 255 0 0
-
-=================================================================
-==3608==ERROR: LeakSanitizer: detected memory leaks
-
-Direct leak of 96 byte(s) in 3 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5f36f7 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #2 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #3 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #4 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #5 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #6 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #7 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #8 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Indirect leak of 855000 byte(s) in 3 object(s) allocated from:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aebbe in prog::Script::add() /home/jose03pedro/PROJ_PROG/project/Script.cpp:256
-    #10 0x560cca5a9f40 in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:79
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-SUMMARY: AddressSanitizer: 855096 byte(s) leaked in 6 allocation(s).
 >>>> [21] fill1 <<<<
 Executing command 'open' ...
 Executing command 'fill' ...
@@ -702,50 +501,51 @@ Executing command 'save' ...
 Executing command 'open' ...
 Executing command 'invert' ...
 =================================================================
-==3626==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f616f7df5d4 at pc 0x560cca5ac59e bp 0x7ffe58e11590 sp 0x7ffe58e11580
-READ of size 1 at 0x7f616f7df5d4 thread T0
-    #0 0x560cca5ac59d in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:159
-    #1 0x560cca5a9d6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
-    #2 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #3 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #4 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #5 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #6 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #7 0x7f61727cde3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #8 0x560cca597ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7eed4)
+==4168==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7fd2030df5d4 at pc 0x557be4a1775a bp 0x7ffd4ca71e30 sp 0x7ffd4ca71e20
+READ of size 1 at 0x7fd2030df5d4 thread T0
+    #0 0x557be4a17759 in prog::Color::Color(prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Color.cpp:9
+    #1 0x557be4a1d60b in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:158
+    #2 0x557be4a1ad6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
+    #3 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #4 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #5 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #6 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #7 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #8 0x7fd2060d6e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #9 0x557be4a08ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7fed4)
 
-0x7f616f7df5d4 is located 0 bytes to the right of 495060-byte region [0x7f616f766800,0x7f616f7df5d4)
+0x7fd2030df5d4 is located 0 bytes to the right of 495060-byte region [0x7fd203066800,0x7fd2030df5d4)
 allocated by thread T0 here:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aa9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
-    #10 0x560cca5a9bfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7fd206cf11c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x557be4a19e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x557be4a19cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x557be4a19b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
+    #4 0x557be4a196ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
+    #5 0x557be4a18ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
+    #6 0x557be4a187f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
+    #7 0x557be4a18111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
+    #8 0x557be4a653ec in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
+    #9 0x557be4a1b9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
+    #10 0x557be4a1abfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
+    #11 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #12 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #13 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #14 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #15 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Script.cpp:159 in prog::Script::invert()
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Color.cpp:9 in prog::Color::Color(prog::Color const&)
 Shadow bytes around the buggy address:
-  0x0fecadef3e60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3ea0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fecadef3eb0: 00 00 00 00 00 00 00 00 00 00[04]fa fa fa fa fa
-  0x0fecadef3ec0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3ed0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3ee0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3ef0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3f00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613e60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613ea0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ffac0613eb0: 00 00 00 00 00 00 00 00 00 00[04]fa fa fa fa fa
+  0x0ffac0613ec0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613ed0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613ee0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613ef0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613f00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 
@@ -766,55 +566,56 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==3626==ABORTING
+==4168==ABORTING
 >>>> [30] invert2 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 =================================================================
-==3627==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f616f7df5d4 at pc 0x560cca5ac59e bp 0x7ffe58e11590 sp 0x7ffe58e11580
-READ of size 1 at 0x7f616f7df5d4 thread T0
-    #0 0x560cca5ac59d in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:159
-    #1 0x560cca5a9d6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
-    #2 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #3 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #4 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #5 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #6 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #7 0x7f61727cde3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #8 0x560cca597ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7eed4)
+==4169==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7fd2030df5d4 at pc 0x557be4a1775a bp 0x7ffd4ca71e30 sp 0x7ffd4ca71e20
+READ of size 1 at 0x7fd2030df5d4 thread T0
+    #0 0x557be4a17759 in prog::Color::Color(prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Color.cpp:9
+    #1 0x557be4a1d60b in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:158
+    #2 0x557be4a1ad6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
+    #3 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #4 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #5 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #6 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #7 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #8 0x7fd2060d6e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #9 0x557be4a08ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7fed4)
 
-0x7f616f7df5d4 is located 0 bytes to the right of 495060-byte region [0x7f616f766800,0x7f616f7df5d4)
+0x7fd2030df5d4 is located 0 bytes to the right of 495060-byte region [0x7fd203066800,0x7fd2030df5d4)
 allocated by thread T0 here:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aa9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
-    #10 0x560cca5a9bfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7fd206cf11c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x557be4a19e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x557be4a19cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x557be4a19b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
+    #4 0x557be4a196ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
+    #5 0x557be4a18ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
+    #6 0x557be4a187f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
+    #7 0x557be4a18111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
+    #8 0x557be4a653ec in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
+    #9 0x557be4a1b9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
+    #10 0x557be4a1abfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
+    #11 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #12 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #13 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #14 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #15 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Script.cpp:159 in prog::Script::invert()
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Color.cpp:9 in prog::Color::Color(prog::Color const&)
 Shadow bytes around the buggy address:
-  0x0fecadef3e60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3ea0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fecadef3eb0: 00 00 00 00 00 00 00 00 00 00[04]fa fa fa fa fa
-  0x0fecadef3ec0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3ed0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3ee0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3ef0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3f00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613e60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613ea0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ffac0613eb0: 00 00 00 00 00 00 00 00 00 00[04]fa fa fa fa fa
+  0x0ffac0613ec0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613ed0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613ee0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613ef0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613f00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 
@@ -835,55 +636,56 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==3627==ABORTING
+==4169==ABORTING
 >>>> [31] invert3 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 =================================================================
-==3628==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f616f7df226 at pc 0x560cca5ac59e bp 0x7ffe58e11590 sp 0x7ffe58e11580
-READ of size 1 at 0x7f616f7df226 thread T0
-    #0 0x560cca5ac59d in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:159
-    #1 0x560cca5a9d6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
-    #2 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #3 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #4 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #5 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #6 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #7 0x7f61727cde3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #8 0x560cca597ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7eed4)
+==4170==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7fd2030df226 at pc 0x557be4a1775a bp 0x7ffd4ca71e30 sp 0x7ffd4ca71e20
+READ of size 1 at 0x7fd2030df226 thread T0
+    #0 0x557be4a17759 in prog::Color::Color(prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Color.cpp:9
+    #1 0x557be4a1d60b in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:158
+    #2 0x557be4a1ad6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
+    #3 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #4 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #5 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #6 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #7 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #8 0x7fd2060d6e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #9 0x557be4a08ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7fed4)
 
-0x7f616f7df226 is located 0 bytes to the right of 297510-byte region [0x7f616f796800,0x7f616f7df226)
+0x7fd2030df226 is located 0 bytes to the right of 297510-byte region [0x7fd203096800,0x7fd2030df226)
 allocated by thread T0 here:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aa9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
-    #10 0x560cca5a9bfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7fd206cf11c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x557be4a19e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x557be4a19cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x557be4a19b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
+    #4 0x557be4a196ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
+    #5 0x557be4a18ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
+    #6 0x557be4a187f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
+    #7 0x557be4a18111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
+    #8 0x557be4a653ec in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
+    #9 0x557be4a1b9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
+    #10 0x557be4a1abfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
+    #11 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #12 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #13 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #14 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #15 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Script.cpp:159 in prog::Script::invert()
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Color.cpp:9 in prog::Color::Color(prog::Color const&)
 Shadow bytes around the buggy address:
-  0x0fecadef3df0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadef3e30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fecadef3e40: 00 00 00 00[06]fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3e50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3e60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3e70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3e80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadef3e90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613df0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac0613e30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ffac0613e40: 00 00 00 00[06]fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613e50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613e60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613e70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613e80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac0613e90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 
@@ -904,55 +706,56 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==3628==ABORTING
+==4170==ABORTING
 >>>> [32] invert4 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 =================================================================
-==3629==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f616ed6cd80 at pc 0x560cca5ac59e bp 0x7ffe58e11590 sp 0x7ffe58e11580
-READ of size 1 at 0x7f616ed6cd80 thread T0
-    #0 0x560cca5ac59d in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:159
-    #1 0x560cca5a9d6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
-    #2 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #3 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #4 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #5 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #6 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #7 0x7f61727cde3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #8 0x560cca597ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7eed4)
+==4171==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7fd20266cd80 at pc 0x557be4a1775a bp 0x7ffd4ca71e30 sp 0x7ffd4ca71e20
+READ of size 1 at 0x7fd20266cd80 thread T0
+    #0 0x557be4a17759 in prog::Color::Color(prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Color.cpp:9
+    #1 0x557be4a1d60b in prog::Script::invert() /home/jose03pedro/PROJ_PROG/project/Script.cpp:158
+    #2 0x557be4a1ad6f in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:55
+    #3 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #4 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #5 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #6 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #7 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #8 0x7fd2060d6e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #9 0x557be4a08ed4 in _start (/home/jose03pedro/PROJ_PROG/project/test+0x7fed4)
 
-0x7f616ed6cd80 is located 0 bytes to the right of 1852800-byte region [0x7f616eba8800,0x7f616ed6cd80)
+0x7fd20266cd80 is located 0 bytes to the right of 1852800-byte region [0x7fd2024a8800,0x7fd20266cd80)
 allocated by thread T0 here:
-    #0 0x7f61733e81c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x560cca5a8e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
-    #2 0x560cca5a8cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
-    #3 0x560cca5a8b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
-    #4 0x560cca5a86ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
-    #5 0x560cca5a7ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
-    #6 0x560cca5a77f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
-    #7 0x560cca5a7111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
-    #8 0x560cca5f3791 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
-    #9 0x560cca5aa9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
-    #10 0x560cca5a9bfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
-    #11 0x560cca59927b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8027b)
-    #12 0x560cca59a07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8107d)
-    #13 0x560cca59bef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x82ef3)
-    #14 0x560cca598340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
-    #15 0x7f61727cdd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7fd206cf11c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x557be4a19e69 in __gnu_cxx::new_allocator<prog::Color>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x557be4a19cbf in std::allocator_traits<std::allocator<prog::Color> >::allocate(std::allocator<prog::Color>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x557be4a19b9d in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
+    #4 0x557be4a196ab in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_M_create_storage(unsigned long) /usr/include/c++/11/bits/stl_vector.h:361
+    #5 0x557be4a18ef0 in std::_Vector_base<prog::Color, std::allocator<prog::Color> >::_Vector_base(unsigned long, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:305
+    #6 0x557be4a187f6 in std::vector<prog::Color, std::allocator<prog::Color> >::vector(unsigned long, prog::Color const&, std::allocator<prog::Color> const&) /usr/include/c++/11/bits/stl_vector.h:524
+    #7 0x557be4a18111 in prog::Image::Image(int, int, prog::Color const&) /home/jose03pedro/PROJ_PROG/project/Image.cpp:5
+    #8 0x557be4a653ec in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/jose03pedro/PROJ_PROG/project/PNG.cpp:20
+    #9 0x557be4a1b9f0 in prog::Script::open() /home/jose03pedro/PROJ_PROG/project/Script.cpp:100
+    #10 0x557be4a1abfb in prog::Script::run() /home/jose03pedro/PROJ_PROG/project/Script.cpp:36
+    #11 0x557be4a0a27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8127b)
+    #12 0x557be4a0b07d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x8207d)
+    #13 0x557be4a0cef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/jose03pedro/PROJ_PROG/project/test+0x83ef3)
+    #14 0x557be4a09340 in main /home/jose03pedro/PROJ_PROG/project/test.cpp:186
+    #15 0x7fd2060d6d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Script.cpp:159 in prog::Script::invert()
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/jose03pedro/PROJ_PROG/project/Color.cpp:9 in prog::Color::Color(prog::Color const&)
 Shadow bytes around the buggy address:
-  0x0fecadda5960: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadda5970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadda5980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadda5990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-  0x0fecadda59a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-=>0x0fecadda59b0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda59c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda59d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda59e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda59f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0fecadda5a00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c5960: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac04c5970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac04c5980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac04c5990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ffac04c59a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ffac04c59b0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c59c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c59d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c59e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c59f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0ffac04c5a00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 
@@ -973,7 +776,7 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==3629==ABORTING
+==4171==ABORTING
 >>>> [33] median_filter1 <<<<
 Executing command 'open' ...
 Executing command 'median_filter' ...
