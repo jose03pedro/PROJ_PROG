@@ -211,16 +211,16 @@ void Script::h_mirror() {
         return;
     }
 
-    // Iterate through each pixel in the image
+    // Iterate through each pixel in the left half of the image
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width() / 2; j++) {
             Color& pixel = image->at(j, i);
-            Color& pixel2 = image->at(image->width() - j - 1, i);
+            Color& mirroredPixel = image->at(image->width() - j - 1, i);
 
-            // Replace the pixel color with the new_color
-            pixel2.red() = pixel.red();
-            pixel2.green() = pixel.green();
-            pixel2.blue() = pixel.blue();
+            // Swap the pixel colors between the left and right halves
+            Color temp = pixel;
+            pixel = mirroredPixel;
+            mirroredPixel = temp;
         }
     }
 }
@@ -231,16 +231,16 @@ void Script::v_mirror() {
         return;
     }
 
-    // Iterate through each pixel in the image
-    for (int i = 0; i < image->height(); i++) {
-        for (int j = 0; j < image->width() / 2; j++) {
+    // Iterate through each pixel in the top half of the image
+    for (int i = 0; i < image->height() / 2; i++) {
+        for (int j = 0; j < image->width(); j++) {
             Color& pixel = image->at(j, i);
-            Color& pixel2 = image->at(image->width() - j - 1, i);
+            Color& mirroredPixel = image->at(j, image->height() - i - 1);
 
-            // Swap the pixel colors
+            // Swap the pixel colors between the top and bottom halves
             Color temp = pixel;
-            pixel = pixel2;
-            pixel2 = temp;
+            pixel = mirroredPixel;
+            mirroredPixel = temp;
         }
     }
 }
