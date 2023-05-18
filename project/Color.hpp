@@ -1,5 +1,6 @@
 #ifndef __prog_Color_hpp__
 #define __prog_Color_hpp__
+using namespace std;
 
 namespace prog {
 typedef unsigned char rgb_value;

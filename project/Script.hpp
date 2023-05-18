@@ -34,6 +34,7 @@ class Script {
     void rotate_left();
     void rotate_right();
     void invert();
+    void to_gray_scale();
 };
 }  // namespace prog
 #endif
