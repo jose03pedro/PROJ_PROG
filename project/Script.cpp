@@ -50,6 +50,45 @@ void Script::run() {
             fill();
             continue;
         }
+
+        if (command == "invert") {
+            invert();
+            continue;
+        }
+
+        if (command == "to_gray_scale") {
+            to_gray_scale();
+            continue;
+        }
+
+        if (command == "replace") {
+            replace();
+            continue;
+        }
+        if (command == "h_mirror") {
+            h_mirror();
+            continue;
+        }
+
+        if (command == "v_mirror") {
+            v_mirror();
+            continue;
+        }
+
+        if (command == "add") {
+            add();
+            continue;
+        }
+
+        if (command == "replace") {
+            replace();
+            continue;
+        }
+
+        if (command == "crop") {
+            crop();
+            continue;
+        }
         // TODO ...
     }
 }
@@ -193,15 +232,15 @@ void Script::v_mirror() {
     }
 
     // Iterate through each pixel in the image
-    for (int i = 0; i < image->height() / 2; i++) {
-        for (int j = 0; j < image->width(); j++) {
+    for (int i = 0; i < image->height(); i++) {
+        for (int j = 0; j < image->width() / 2; j++) {
             Color& pixel = image->at(j, i);
-            Color& pixel2 = image->at(j, image->height() - i - 1);
+            Color& pixel2 = image->at(image->width() - j - 1, i);
 
-            // Replace the pixel color with the new_color
-            pixel2.red() = pixel.red();
-            pixel2.green() = pixel.green();
-            pixel2.blue() = pixel.blue();
+            // Swap the pixel colors
+            Color temp = pixel;
+            pixel = pixel2;
+            pixel2 = temp;
         }
     }
 }
