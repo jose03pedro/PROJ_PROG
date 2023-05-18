@@ -155,11 +155,10 @@ void Script::invert() {
     // Invert the colors of the image
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width(); j++) {
-            Color pos = image->at(i, j);
+            Color& pos = image->at(j, i);
             pos.red() = 255 - pos.red();
             pos.green() = 255 - pos.green();
             pos.blue() = 255 - pos.blue();
-            image->at(j, i) = pos;
         }
     }
 }
@@ -296,7 +295,7 @@ void Script::rotate_left() {
         return;
     }
 
-    // Create a new image with the specified dimensions
+    // Create a new image with the swapped dimensions
     Image* new_image = new Image(image->height(), image->width());
 
     // Iterate through each pixel in the image
@@ -306,9 +305,7 @@ void Script::rotate_left() {
             Color& new_pixel = new_image->at(image->height() - i - 1, j);
 
             // Replace the pixel color with the new_color
-            new_pixel.red() = pixel.red();
-            new_pixel.green() = pixel.green();
-            new_pixel.blue() = pixel.blue();
+            new_pixel = pixel;
         }
     }
 
