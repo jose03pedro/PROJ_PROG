@@ -5,8 +5,7 @@ Color::Color() : red_(0), green_(0), blue_(0) {
     // Initializes the color to black (0, 0, 0).
 }
 
-Color::Color(const Color& other)
-    : red_(other.red_), green_(other.green_), blue_(other.blue_) {
+Color::Color(const Color& c) : red_(c.red_), green_(c.green_), blue_(c.blue_) {
     // Copies the RGB values from another object.
 }
 

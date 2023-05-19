@@ -89,6 +89,17 @@ void Script::run() {
             crop();
             continue;
         }
+
+        if (command == "rotate_left") {
+            rotate_left();
+            continue;
+        }
+
+        if (command == "rotate_right") {
+            rotate_right();
+            continue;
+        }
+
         // TODO ...
     }
 }
@@ -183,26 +194,20 @@ void Script::to_gray_scale() {
 }
 
 void Script::replace() {
-    // Replace color (r1, g1, b1) with color (r2, g2, b2).
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
-    Color old_color, new_color;
-    input >> old_color >> new_color;
-
-    // Iterate through each pixel in the image
+    Color oldColor, newColor;
+    input >> oldColor >> newColor;
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width(); j++) {
-            Color& pixel = image->at(j, i);
-
-            // Replace the pixel color with the new_color
-            pixel.red() = new_color.red();
-            pixel.green() = new_color.green();
-            pixel.blue() = new_color.blue();
+            if (compareColors(image->at(j, i), oldColor)) {
+                image->at(j, i) = newColor;
+            }
         }
     }
+}
+
+bool Script::compareColors(const Color& color1, const Color& color2) {
+    return color1.red() == color2.red() && color1.green() == color2.green() &&
+           color1.blue() == color2.blue();
 }
 
 void Script::h_mirror() {
@@ -250,6 +255,47 @@ void Script::add() {
         cout << "No image loaded." << endl;
         return;
     }
+
+    Image* current_image = image;
+
+    string filename;
+    input >> filename;
+
+    image = loadFromPNG(filename);
+
+    if (image == nullptr) {
+        cout << "Error loading image from file: " << filename << endl;
+        return;
+    }
+    int r, g, b, x, y;
+    input >> r >> g >> b >> x >> y;
+
+    int image_width = image->width();
+    int image_height = image->height();
+
+    int current_width = current_image->width();
+    int current_height = current_image->height();
+
+    for (int i = 0; i < image_height; i++) {
+        for (int j = 0; j < image_width; j++) {
+            Color& pixel = image->at(j, i);
+            if (compareColors(pixel, Color(r, g, b))) {
+                continue;  // Skip the pixel if it matches the "neutral" color
+            }
+
+            int current_x = x + j;
+            int current_y = y + i;
+
+            if (current_x >= 0 && current_x < current_width && current_y >= 0 &&
+                current_y < current_height) {
+                Color& current_pixel = current_image->at(current_x, current_y);
+                current_pixel = pixel;
+            }
+        }
+    }
+
+    delete image;
+    image = current_image;
 }
 
 void Script::crop() {
@@ -302,8 +348,7 @@ void Script::rotate_left() {
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width(); j++) {
             Color& pixel = image->at(j, i);
-            Color& new_pixel = new_image->at(image->height() - i - 1, j);
-
+            Color& new_pixel = new_image->at(i, image->width() - j - 1);
             // Replace the pixel color with the new_color
             new_pixel = pixel;
         }
@@ -327,7 +372,7 @@ void Script::rotate_right() {
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width(); j++) {
             Color& pixel = image->at(j, i);
-            Color& new_pixel = new_image->at(i, image->width() - j - 1);
+            Color& new_pixel = new_image->at(image->height() - i - 1, j);
 
             // Replace the pixel color with the new_color
             new_pixel.red() = pixel.red();
@@ -340,4 +385,5 @@ void Script::rotate_right() {
     delete image;
     image = new_image;
 }
+
 }  // namespace prog

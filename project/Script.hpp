@@ -9,13 +9,13 @@
 namespace prog {
 class Script {
    public:
-    Script(const std::string &filename);
+    Script(const std::string& filename);
     ~Script();
     void run();
 
    private:
     // Current image.
-    Image *image;
+    Image* image;
     // Input stream for reading script commands.
     ifstream input;
 
@@ -35,6 +35,7 @@ class Script {
     void rotate_right();
     void invert();
     void to_gray_scale();
+    bool compareColors(const Color& color1, const Color& color2);
 };
 }  // namespace prog
 #endif
