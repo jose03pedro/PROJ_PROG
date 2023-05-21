@@ -40,6 +40,10 @@ void Script::run() {
             blank();
             continue;
         }
+
+        if (image == nullptr) {
+            return;
+        }
         // Other commands require an image to be previously loaded.
         if (command == "save") {
             save();
@@ -121,34 +125,22 @@ void Script::blank() {
 
 void Script::save() {
     // Save current image to PNG file.
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
     string filename;
     input >> filename;
     saveToPNG(filename, image);
 }
 
 void Script::fill() {
-    // Fill rectangle (x, y, w, h) with color (r, g, b).
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
+    // fills a rectangular area within the image with a specified color.
     int x, y, w, h;
     Color fill;
     input >> x >> y >> w >> h >> fill;
 
-    // Check if the input is valid
     if (x < 0 || y < 0 || w <= 0 || h <= 0 || x + w > image->width() ||
         y + h > image->height()) {
-        cout << "Invalid rectangle dimensions." << endl;
         return;
     }
 
-    // Fill the specified rectangle with the provided color
     for (int i = y; i < y + h; i++) {
         for (int j = x; j < x + w; j++) {
             image->at(j, i) = fill;
@@ -157,13 +149,7 @@ void Script::fill() {
 }
 
 void Script::invert() {
-    // Invert colors.
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
-    // Invert the colors of the image
+    // inverts the color in the image object
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width(); j++) {
             Color& pos = image->at(j, i);
@@ -175,13 +161,7 @@ void Script::invert() {
 }
 
 void Script::to_gray_scale() {
-    // Convert image to grayscale.
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
-    // Convert each pixel to grayscale
+    // converts the image stored object to grayscale.
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width(); j++) {
             Color& pos = image->at(j, i);
@@ -194,6 +174,7 @@ void Script::to_gray_scale() {
 }
 
 void Script::replace() {
+    // replace an oldcolor with a newcolor in a image
     Color oldColor, newColor;
     input >> oldColor >> newColor;
     for (int i = 0; i < image->height(); i++) {
@@ -206,16 +187,12 @@ void Script::replace() {
 }
 
 bool Script::compareColors(const Color& color1, const Color& color2) {
+    // Function to compare 2 Color objects
     return color1.red() == color2.red() && color1.green() == color2.green() &&
            color1.blue() == color2.blue();
 }
 
 void Script::h_mirror() {
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
     // Iterate through each pixel in the left half of the image
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width() / 2; j++) {
@@ -231,11 +208,6 @@ void Script::h_mirror() {
 }
 
 void Script::v_mirror() {
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
     // Iterate through each pixel in the top half of the image
     for (int i = 0; i < image->height() / 2; i++) {
         for (int j = 0; j < image->width(); j++) {
@@ -251,11 +223,8 @@ void Script::v_mirror() {
 }
 
 void Script::add() {
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
+    // Overlay the loaded image onto the current image at a specified position,
+    // with a specified color
     Image* current_image = image;
 
     string filename;
@@ -264,7 +233,6 @@ void Script::add() {
     image = loadFromPNG(filename);
 
     if (image == nullptr) {
-        cout << "Error loading image from file: " << filename << endl;
         return;
     }
     int r, g, b, x, y;
@@ -299,52 +267,30 @@ void Script::add() {
 }
 
 void Script::crop() {
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
     int x, y, w, h;
     input >> x >> y >> w >> h;
-
-    // Check if the rectangle is valid
-    if (x < 0 || y < 0 || w < 0 || h < 0 || x + w > image->width() ||
-        y + h > image->height()) {
-        cout << "Invalid rectangle dimensions." << endl;
-        return;
-    }
 
     // Create a new image with the specified dimensions
     Image* new_image = new Image(w, h);
 
-    // Iterate through each pixel in the image
     for (int i = y; i < y + h; i++) {
         for (int j = x; j < x + w; j++) {
             Color& pixel = image->at(j, i);
             Color& new_pixel = new_image->at(j - x, i - y);
 
             // Replace the pixel color with the new_color
-            new_pixel.red() = pixel.red();
-            new_pixel.green() = pixel.green();
-            new_pixel.blue() = pixel.blue();
+            new_pixel = pixel;
         }
     }
 
-    // Delete the old image and set the new image
     delete image;
     image = new_image;
 }
 
 void Script::rotate_left() {
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
-    // Create a new image with the swapped dimensions
+    // Create a new image swapping the dimensions
     Image* new_image = new Image(image->height(), image->width());
 
-    // Iterate through each pixel in the image
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width(); j++) {
             Color& pixel = image->at(j, i);
@@ -354,34 +300,24 @@ void Script::rotate_left() {
         }
     }
 
-    // Delete the old image and set the new image
     delete image;
     image = new_image;
 }
 
 void Script::rotate_right() {
-    if (image == nullptr) {
-        cout << "No image loaded." << endl;
-        return;
-    }
-
-    // Create a new image with the specified dimensions
+    // Create a new image swapping the dimensions
     Image* new_image = new Image(image->height(), image->width());
 
-    // Iterate through each pixel in the image
     for (int i = 0; i < image->height(); i++) {
         for (int j = 0; j < image->width(); j++) {
             Color& pixel = image->at(j, i);
             Color& new_pixel = new_image->at(image->height() - i - 1, j);
 
             // Replace the pixel color with the new_color
-            new_pixel.red() = pixel.red();
-            new_pixel.green() = pixel.green();
-            new_pixel.blue() = pixel.blue();
+            new_pixel = pixel;
         }
     }
 
-    // Delete the old image and set the new image
     delete image;
     image = new_image;
 }
